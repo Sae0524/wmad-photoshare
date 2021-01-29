@@ -1,0 +1,56 @@
+@import "navber","colors";
+
+@mixin mq ($width:680px) {
+  @media only screen and (max-width:$width){
+    @content;
+  }
+}
+
+body {
+  background-color: $primary-color;
+  @include mq () {
+    font-size: $fontsize;
+    margin: 2% 0;
+  }
+}
+
+#imgcontents {
+  margin: 5% 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include mq {
+    margin: 0;
+    width: 100%;
+  }
+
+  img {
+    width: auto;
+    height: 250px;
+    margin: 5px;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    @include mq {
+      margin: 0;
+      width: 100%;
+    }
+  }
+    .icon {
+      text-align: right;
+
+      i {
+        margin-right: 10px;
+        color: $text-color;
+        font-size: $fontsize *1.5;
+      }
+    }
+
+}
+
+
+
+

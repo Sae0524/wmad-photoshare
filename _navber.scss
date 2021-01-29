@@ -1,0 +1,30 @@
+@import "colors";
+
+$fontsize:10px;
+
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 5%;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        display: inline-block;
+        margin-right: 2px;
+      }
+      a {
+        text-decoration: none;
+        font-size:$fontsize *2; 
+        margin-right: 2em;
+        color: $text-color;
+    
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  
